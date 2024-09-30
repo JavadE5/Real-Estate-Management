@@ -33,12 +33,8 @@ const Login = () => {
 
   return (
     <div className="auth-container">
-      <h1 className="title">HomeHub</h1> {/* Brand Name */}
-      <p className="Subtitle">
-        {" "}
-        Welcome to HomeHub! Please log in to continue.
-      </p>{" "}
-      {/* Welcome Message */}
+      <h1 className="title">HousingHub</h1>
+      <p className="subtitle">Welcome to HomeHub! Please log in to continue.</p>
       <form onSubmit={handleLogin} className="auth-form">
         <div className="input-group">
           <label>Email</label>

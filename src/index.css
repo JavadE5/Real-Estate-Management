@@ -1,122 +1,117 @@
-/* AuthStyles.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  font-family: "Poppins", sans-serif; /* Modern font */
-  background-color: #1e1e2f; /* Dark background */
+  font-family: "Poppins", sans-serif;
+  background-color: #08080e;
   margin: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full viewport height */
-  color: #f3f4f6; /* Light text color */
+  height: 100vh;
+  color: #f3f4f6;
 }
 
 .auth-container {
-  width: 100%; /* Full width */
-  max-width: 400px; /* Fixed max width for the form */
+  width: 100%;
+  max-width: 400px;
+  background: rgb(14, 16, 18);
+  padding: 1.5rem;
   border-radius: 0.75rem;
-  background-color: rgba(17, 24, 39, 1); /* Form background color */
-  padding: 2rem; /* Padding for the form */
-  color: rgba(243, 244, 246, 1); /* Text color */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .title {
   text-align: center;
-  font-size: 2.5rem; /* Larger title size */
-  line-height: 3rem; /* Spacing between lines */
-  font-weight: 700;
-  color: #a78bfa; /* Highlight color for title */
-  margin-bottom: 1rem; /* Space below title */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  font-weight: bold;
+  color: #a78bfa;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+  text-align: center;
+  color: #ccc;
 }
 
 .auth-form {
-  margin-top: 1.5rem;
-}
-
-.auth-form h2 {
-  margin-bottom: 1rem; /* Space below subheading */
-  text-align: center; /* Center the title */
-  font-size: 2rem; /* Font size for subheading */
-  color: #a78bfa; /* Highlight color for subheading */
+  margin: 1.5rem auto 1.5rem auto;
 }
 
 .input-group {
-  margin-top: 1rem; /* Margin for spacing */
+  margin-top: 1rem;
 }
 
 .input-group label {
   display: block;
-  color: rgba(156, 163, 175, 1); /* Label color */
-  margin-bottom: 0.5rem; /* Space below labels */
+  color: rgba(156, 163, 175, 1);
+  margin-bottom: 0.5rem;
 }
 
 .input-group input {
-  width: 100%; /* Full width */
-  max-width: 100%; /* Ensure no overflow */
+  width: 100%;
+  max-width: 100%;
   border-radius: 0.375rem;
-  border: 1px solid rgba(55, 65, 81, 1); /* Border color */
+  border: 1px solid rgba(55, 65, 81, 1);
   outline: 0;
-  background-color: rgba(17, 24, 39, 1); /* Input background color */
-  padding: 0.75rem 1rem; /* Padding for input */
-  color: rgba(243, 244, 246, 1); /* Input text color */
-  transition: border-color 0.3s; /* Smooth transition */
-  box-sizing: border-box; /* Include padding and border in element's total width */
+  background-color: rgb(14, 16, 18);
+  padding: 0.75rem 1rem;
+  color: rgba(243, 244, 246, 1);
+  transition: border-color 0.3s;
 }
 
 .input-group input:focus {
-  border-color: rgba(167, 139, 250); /* Focus border color */
+  border-color: rgba(167, 139, 250);
 }
 
 .error-message {
-  color: #dc3545; /* Red color for error messages */
-  font-size: 0.875rem; /* Font size for error messages */
-  margin-top: 0.5rem; /* Space above error message */
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
 }
 
 .success-message {
-  color: #28a745; /* Green color for success messages */
-  font-size: 0.875rem; /* Font size for success messages */
-  margin-top: 0.5rem; /* Space above success message */
+  color: #28a745;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
 }
 
 button {
   display: block;
-  width: 100%; /* Full width */
-  background-color: rgba(167, 139, 250, 1); /* Button background */
+  padding-top: 2rem;
+  width: 100%;
+  background-color: rgba(167, 139, 250, 1);
   padding: 0.75rem;
   text-align: center;
-  color: rgba(17, 24, 39, 1); /* Button text color */
+  color: rgba(17, 24, 39, 1);
   border: none;
-  border-radius: 0.375rem; /* Rounded corners */
-  font-weight: 600; /* Bold text */
-  margin-top: 1rem; /* Space above button */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s; /* Smooth transition */
+  border-radius: 0.375rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: rgba(127, 99, 250, 1); /* Darker shade on hover */
+  background-color: rgba(127, 99, 250, 1);
 }
 
 .forgot,
 .signup {
-  display: flex; /* Flex container for links */
-  justify-content: center; /* Center align links */
-  font-size: 0.875rem; /* Font size for links */
+  display: flex;
+  justify-content: center;
+  font-size: 0.875rem;
   line-height: 1rem;
-  color: rgba(156, 163, 175, 1); /* Color for links */
-  margin-top: 1rem; /* Space above links */
+  color: rgba(156, 163, 175, 1);
+  margin-top: 1rem;
 }
 
-.forgot a,
-.signup a {
-  color: rgba(243, 244, 246, 1); /* Link color */
-  text-decoration: none; /* Remove underline */
-}
-
-.forgot a:hover,
-.signup a:hover {
-  text-decoration: underline; /* Underline on hover */
+.forgot span:hover,
+.signup span:hover {
+  text-decoration: underline;
 }

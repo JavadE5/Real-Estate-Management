@@ -37,11 +37,11 @@ const Signup = () => {
 
   return (
     <div className="auth-container">
-      <h1 className="title">HomeHub</h1> {/* Brand Name */}
-      <p>Welcome to HomeHub! Sign up to manage your real estate needs.</p>{" "}
-      {/* Welcome Message */}
+      <h1 className="title">HousingHub</h1> {/* Brand Name */}
+      <p className="subtitle">
+        Welcome to HomeHub! Sign up to manage your real estate needs.
+      </p>
       <form onSubmit={handleSignup} className="auth-form">
-        <h2>Sign Up</h2>
         <div className="input-group">
           <label>Email</label>
           <input
@@ -76,18 +76,20 @@ const Signup = () => {
         {success && (
           <div className="success-message">
             <p>Account created successfully!</p>
-            <p>
-              Already have an account?{" "}
-              <span
-                onClick={handleLoginRedirect}
-                style={{ cursor: "pointer", color: "#a78bfa" }}
-              >
-                Login
-              </span>
-            </p>
           </div>
         )}
         {!success && <button type="submit">Sign Up</button>}
+        <div className="signup">
+          <p>
+            Already have an account?{" "}
+            <span
+              onClick={handleLoginRedirect}
+              style={{ cursor: "pointer", color: "#a78bfa" }}
+            >
+              Login
+            </span>
+          </p>
+        </div>
       </form>
     </div>
   );
