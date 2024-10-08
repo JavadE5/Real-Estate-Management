@@ -17,8 +17,12 @@ const LandingPage = () => {
     navigate(`/${userType}-${action}`);
   };
 
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
-    <div className="landing-page">
+    <div>
       <header className="header">
         <div className="container">
           <div className="logo">
@@ -27,34 +31,64 @@ const LandingPage = () => {
           <nav className="nav">
             <ul>
               <li>
-                <button onClick={() => handleAction("login")}>Login</button>
+                <button
+                  className="login-btn"
+                  onClick={() => handleAction("login")}
+                >
+                  Login
+                </button>
               </li>
               <li>
-                <button onClick={() => handleAction("signup")}>Sign Up</button>
+                <button
+                  className="signup-btn"
+                  onClick={() => handleAction("signup")}
+                >
+                  Sign Up
+                </button>
               </li>
             </ul>
           </nav>
         </div>
       </header>
+
+      <div className="hero">
+        <h1>Discover Your Perfect Home Today</h1>
+        <p>
+          At Create Real Estate Management, we connect buyers and sellers to
+          make your dream home a reality. Explore our listings and find the
+          ideal property that fits your lifestyle.
+        </p>
+      </div>
+
       {showModal && (
-        <div className="modal">
-          <div className="modal-content">
+        <div className="modal" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-modal" onClick={closeModal}>
+              &times;
+            </button>
             <h2>Select User Type</h2>
-            <button onClick={() => handleUserTypeSelection("buyer")}>
+            <p>Please choose your user type to proceed:</p>
+            <button
+              className="type"
+              onClick={() => handleUserTypeSelection("buyer")}
+            >
               Buyer
             </button>
-            <button onClick={() => handleUserTypeSelection("seller")}>
+            <button
+              className="type"
+              onClick={() => handleUserTypeSelection("seller")}
+            >
               Seller
             </button>
-            <button onClick={() => handleUserTypeSelection("admin")}>
+            <button
+              className="type"
+              onClick={() => handleUserTypeSelection("admin")}
+            >
               Admin
             </button>
           </div>
         </div>
       )}
-      <main className="main-section">
-        <div className="overlay"></div>
-      </main>
     </div>
   );
 };
